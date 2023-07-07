@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RobustApplication<robust>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "store.shortifymyurl.robust.RobustApplication",
+            "projectName": "robust",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
