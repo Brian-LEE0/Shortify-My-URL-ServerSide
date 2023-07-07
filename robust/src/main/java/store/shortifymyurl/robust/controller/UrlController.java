@@ -1,5 +1,6 @@
 package store.shortifymyurl.robust.controller;
 
+import java.util.Optional;
 import org.springframework.web.bind.annotation.*;
 
 import store.shortifymyurl.robust.dto.PagesDTO;
@@ -21,11 +22,11 @@ public class UrlController {
         return url.toString();
     }
 
-    @GetMapping(value = { "/myurls/{page_n}", "/myurls/" })
-    public String get_myurls(@PathVariable int page_n, PagesDTO pageinfo) {
+    @GetMapping(value = { "/myurls/{page_n}", "/myurls" })
+    public String get_myurls(@PathVariable(required = false) Optional<Integer> page_n, PagesDTO pageinfo) {
         // TODO: process Get request
-
-        return page_n + pageinfo.toString();
+        int n = page_n.orElse(1);
+        return n + pageinfo.toString();
     }
 
 }
