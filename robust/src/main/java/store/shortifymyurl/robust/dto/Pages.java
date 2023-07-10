@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class PagesDTO {
+public class Pages {
     @Schema(example = "000000001")
     private String user_id;
     @Schema(example = "URL")

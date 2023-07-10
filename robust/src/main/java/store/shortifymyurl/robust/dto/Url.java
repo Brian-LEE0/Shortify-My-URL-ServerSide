@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(exclude = "id")
-public class UrlDTO {
+public class Url {
     private String id; // UUID
     private String original_url;
     private String short_url;
